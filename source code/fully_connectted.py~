@@ -1,0 +1,33 @@
+#!/usr/bin/python
+from struct import *
+import math
+
+#### This is the last function it connected all out put layer of covelutional function ######
+# Here I use softmax function to calculat loss ##########
+## Here we calcula
+def fully_connection_by_softmax(d,x):
+
+## By soft max function ########
+ print("-----------come to fully connected function ---------------")
+ sum_x=0.0
+ s=[]
+ for i in range(0,d,1):
+  sum_x=math.exp(x[i][0])+sum_x
+  #print(x[i][0])
+ for i in range(0,d,1):
+  s.append(math.exp(x[i][0])/sum_x)
+ print("-----------return back from fully connection fucntion---------------")
+ return s
+
+def fully_connection_by_svm(d,x):
+
+## By soft max function ########
+ print("-----------come to fully connected function ---------------")
+ s=[]
+ for i in range(0,d,1):
+  s.append(x[i][0])
+ print("-----------return back from fully connection fucntion---------------")
+ return s
+
+
+
